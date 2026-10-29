@@ -134,7 +134,7 @@ void Mbus::parse_telegram() {
 
   if(pos) { ESP_LOGD(TAG, "%llx: Parsing variable payload done, %d records", this->secondary_address, (int) this->records.size()); }
 
-  if( pos > (len-3) ){
+  if( pos > (len-2) ){
 	  ESP_LOGW(TAG, "%llx: Overrun while parsing telegram.", this->secondary_address);
 	  pos=0;
   }
